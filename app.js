@@ -11,7 +11,7 @@ const io = new Server(server, {
     origin: "http://localhost:3000",
   },
 });
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
